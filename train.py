@@ -11,7 +11,8 @@ from model import make_model
 
 # Training
 model = make_model(input_shape, num_classes)
-epochs = 10
+epochs = 20
+finetuning_epochs = 10
 
 callbacks = [
     keras.callbacks.ModelCheckpoint("checkpoints/model.keras", save_best_only=True),
@@ -72,7 +73,7 @@ data_augmentation_layers.extend(
 
 model.fit(
     train_ds,
-    epochs=5,
+    epochs=finetuning_epochs,
     callbacks=fineTuningCallbacks,
     validation_data=val_ds,
 )

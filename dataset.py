@@ -25,6 +25,7 @@ def data_augmentation(images):
 
 
 def normalizeImage(img):
+    img = img.convert("RGB")
     img = img.crop(
         box=(
             (img.width / 2) - (img.height / 2),

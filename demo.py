@@ -34,13 +34,21 @@ def predict_image(img_path):
     score = predictions[0]
 
     # Get highest probability index
-    class_idx = np.argmax(score)
-    confidence = 100 * np.max(score)
+    # class_idx = np.argmax(score)
+    # confidence = 100 * np.max(score)
 
-    print(f"Image: {Path(img_path).name}")
-    print(f"Predicted: {class_names[class_idx]} ({confidence:.2f}% confidence)")
+    print(f"\nImage: {Path(img_path).name}\n")
+    scores = {}
+    for i in range(len(score)):
+        scores[class_names[i]] = score[i]
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    for class_name, score in sorted_scores:
+        print(f"{class_name}: {score * 100:.4f}%")
     print("-" * 30)
 
 
 if __name__ == "__main__":
-    predict_image("demoDataset/swamp1.webp")
+    demoDataset = Path("demoDataset")
+
+    for imgPath in demoDataset.iterdir():
+        predict_image(imgPath)

@@ -13,7 +13,9 @@ def make_model(input_shape, num_classes):
             base,
             layers.GlobalAveragePooling2D(),  # Use this instead of Flatten()
             layers.Dense(512, activation="relu"),
-            layers.Dropout(0.3),
+            layers.Dropout(0.5),
+            layers.Dense(256, activation="relu"),
+            layers.Dropout(0.2),
             layers.Dense(num_classes, activation="softmax"),
         ]
     )
