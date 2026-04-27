@@ -58,3 +58,11 @@ The model processes new images and returns an array of probabilities for each bi
 To validate the effectiveness of the solution, the following procedures were performed:
 * **Test Dataset:** Application of evaluation metrics (Accuracy) on the separate test dataset.
 * **Unit Tests:** Individual testing with images external to the original dataset to verify the AI's generalization capability across different gameplay scenarios.
+
+---
+
+## 6. Model Testing in live
+
+
+
+
