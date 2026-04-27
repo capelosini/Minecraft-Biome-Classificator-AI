@@ -6,7 +6,6 @@ from threading import Thread
 
 import keras
 import numpy as np
-from PIL import ImageGrab
 
 from dataset import class_names, input_shape, normalizedOpenImage, num_classes
 from model import make_model
