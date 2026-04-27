@@ -73,4 +73,8 @@ To validate the effectiveness of the solution, the following procedures were per
 
 
 
+https://github.com/user-attachments/assets/b73d278e-cac8-4790-894c-f1a0bf06d4ac
+
+
+
 
